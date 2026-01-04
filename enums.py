@@ -10,3 +10,4 @@ class OperatorType(Enum):
 class Association(Enum):
     LEFT = auto()
     RIGHT = auto()
+    NONE = auto()
