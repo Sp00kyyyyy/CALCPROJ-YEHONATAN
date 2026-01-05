@@ -11,5 +11,5 @@ class Operator(ABC):
 
     @abstractmethod
     def calculate(self, *operands: float) -> float:
-        """פעולה לחישוב תוצאת האופרטור. חובה ליישם במחלקות היורשות"""
+        """פעולה לחישוב תוצאת האופרטור. חובה ליישם את הפעולה במחלקות היורשות"""
         pass
