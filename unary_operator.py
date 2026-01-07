@@ -4,7 +4,7 @@ from enums import OperatorType
 
 
 class UnaryOperator(Operator):
-    def __init__(self, symbol: str, precedence: int, operator_type: OperatorType):
+    def __init__(self, symbol: str, precedence: float, operator_type: OperatorType):
         super().__init__(symbol, precedence, operator_type)
 
     @abstractmethod
