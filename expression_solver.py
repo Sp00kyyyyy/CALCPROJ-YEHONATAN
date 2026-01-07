@@ -61,13 +61,13 @@ class ExpressionSolver:
         temp_op_type: OperatorType = temp_op.operator_type
         if temp_op_type == OperatorType.INFIX:
             del self.tokens[index - 1: index + 2]
-            self.tokens.insert(index - 1, str(result))
+            self.tokens.insert(index - 1, float(result))
         elif temp_op_type == OperatorType.POSTFIX:
             del self.tokens[index: index + 2]
-            self.tokens.insert(index, str(result))
+            self.tokens.insert(index, float(result))
         else:
             del self.tokens[index - 1: index + 1]
-            self.tokens.insert(index - 1, str(result))
+            self.tokens.insert(index - 1, float(result))
 
     def solve_parentheses(self) -> None:
         open_index: int = -1
