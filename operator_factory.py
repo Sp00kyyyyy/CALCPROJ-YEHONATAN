@@ -11,15 +11,18 @@ from factorial import Factorial
 from negate import Negate
 from unary_minus import UnaryMinus
 from enums import OperatorType
-from operator import Operator
+from base_operator import Operator
+from digit_sum import DigitSum
 
 
 class OperatorFactory:
+    """מפעל ליצירת אופרטורים."""
     REGISTRY: dict = {"+": Plus, "-": [Minus, UnaryMinus], "*": Multiply, "/": Divide, "^": Power, "%": Modulo,
-                      "$": Maximum, "&": Minimum, "@": Average, "!": Factorial, "~": Negate}
+                      "$": Maximum, "&": Minimum, "@": Average, "!": Factorial, "~": Negate, "#": DigitSum}
 
     @staticmethod
     def create(symbol: str, operator_type: OperatorType) -> Operator:
+        """יצירת אופרטור לפי סימן וסוג."""
         if symbol == "-":
             for minus in OperatorFactory.REGISTRY["-"]:
                 temp_instance: Operator = minus()

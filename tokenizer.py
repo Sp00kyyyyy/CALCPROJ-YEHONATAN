@@ -1,11 +1,14 @@
 class Tokenizer:
-    OPERATORS_AND_PARENTHESES = "+-*/^%$&@~!()"
+    """מפרק ביטויים לאסימונים."""
+    OPERATORS_AND_PARENTHESES = "+-*/^%$&@~!()#"
     VALID_NUMBER_CHARS = "0123456789."
 
     def __init__(self, expression: str):
+        """אתחול מפרק."""
         self.expression = expression
 
     def tokenize(self) -> list:
+        """פירוק הביטוי לאסימונים."""
         tokens: list = []
         current_number: str = ""
         for char in self.expression:

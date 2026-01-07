@@ -3,10 +3,14 @@ from enums import OperatorType
 
 
 class Minimum(BinaryOperator):
+    """אופרטור מינימום."""
+    
     def __init__(self):
+        """אתחול אופרטור מינימום."""
         super().__init__("&", 5, OperatorType.INFIX)
 
     def calculate(self, left: float, right: float) -> float:
+        """החזרת הערך הקטן מבין שניים."""
         min_number: float = 0
         if left <= right:
             min_number = left
