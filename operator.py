@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from enums import OperatorType, Association
+from enums import OperatorType
 
 
 class Operator(ABC):
