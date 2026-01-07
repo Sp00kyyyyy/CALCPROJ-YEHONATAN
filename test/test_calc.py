@@ -5,6 +5,7 @@ from post_validator import PostValidator
 from expression_solver import ExpressionSolver
 
 
+
 def run_expression(expression):
     pre_validator = PreValidator()
     pre_validator.validate(expression)
@@ -157,7 +158,7 @@ class TestComplexExpressions:
         assert run_expression("((2+3)*4)-(5*2)+3!") == 16.0
 
     def test_maximum_minimum_average(self):
-        assert run_expression("(5$3)&(7$2)@(10%3)") == 2.0
+        assert run_expression("(5$3)&(7$2)@(10%3)") == 3.0
 
     def test_digit_sum_with_operations(self):
         assert run_expression("123#+99##") == 15.0
