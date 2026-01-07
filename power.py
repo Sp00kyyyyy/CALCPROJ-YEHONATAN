@@ -1,5 +1,5 @@
 from binary_operator import BinaryOperator
-from enums import OperatorType, Association
+from enums import OperatorType
 
 
 class Power(BinaryOperator):
